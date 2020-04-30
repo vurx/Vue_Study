@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ssj</title>
+</head>
+
+<body>
+<div id="app">
+    <h2>当前计数：{{count}}</h2>
+    <button @click="add">+</button>
+    <button @click="sub">-</button>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        //绑定元素
+        el: "#app",
+        //定义数据
+        data: {
+            count: 0
+        },
+        //事件
+        methods: {
+            add() {
+                this.count++
+            },
+            sub() {
+                this.count--
+            }
+        }
+    })
+</script>
+</body>
+</html>
